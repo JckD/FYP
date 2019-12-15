@@ -6,28 +6,17 @@ import {
   Element,
   Pic,
   Title,
+    Document,
   Subtitle
    } from '@botonic/react'
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
-    static async botonicInit({ input, session, params, lastRoutePath, Text, req}) {
-        console.log(params);
-        session.campus = params.location;
+    static async botonicInit({ input, session, params, lastRoutePath, Text}) {
         
-        if (params.location == null)
-        {
-            if(input.data.includes('Kevin St'))
-            {
-                params.location = 'Kevin St';
-            }
-        } 
+        let buttonObj = params;
+        console.log(buttonObj.location);
         
-            let buttonObj = params;
-        
-        console.log(input);
-        // console.log(lastRoutePath);
-         console.log(session);
 
       return {buttonObj}
   }
@@ -37,13 +26,13 @@ export default class extends React.Component {
     return (
     <>
         <Text>
-            Here are the opening times for {this.props.buttonObj.location} library: {'\n'}
+            Here are the Exam Timetables for {this.props.buttonObj.location}: {'\n'}
         </Text>
         {this.props.buttonObj.location == 'Kevin St' &&
             <>
-                <Text>Mon-Thurs: 09:00-21:30 {'\n'}
-                Friday: 09:00-17:15{'\n'}
-                Saturday : 09:30-16:30</Text>
+                <Text>Exam Timetables are usuallly released 4 weeks before the exam
+                <Button url='https://www.dit.ie/media/examinations/examtimetables/TU%20Dublin%20City%20-%20Kevin%20Street%20V2.pdf'>Timetable</Button>
+                </Text>
             </>
         }
         {this.props.buttonObj.location == 'Augnier St' &&
@@ -81,7 +70,7 @@ export default class extends React.Component {
                 Saturday: 09:30-16:30</Text>
             </>
         }
-        <Button url='https://www.dit.ie/library/location/'>Find out more here.</Button>
+        
     </>
     )
   }

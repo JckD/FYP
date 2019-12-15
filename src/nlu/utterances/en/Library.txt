@@ -1,5 +1,12 @@
 library
 Library
+Where is [Kevin St](Place) library?
+Where is [kevin St](Place) library?
+Where is [Augnier St](Place) library?
+Where is [Cathal Brugha street](Place) library?
+Where is [grangegorman](Place) library?
+Where is [Bolton St](Place) library?
+Where is [Rathmines](Place) library?
 Where is the library?
 When is the library open?
 Do you know when the library is open?
