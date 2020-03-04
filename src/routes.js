@@ -21,13 +21,16 @@ export const routes = [
   { input: i => i.confidence < 0.7, action: NotFound},
 
   { intent: 'Library', action: Library},
+  { path: 'Library', action : Library},
   { path: 'getLibrary', action: GetLibrary},
   // {input: (i) => i.data.includes('Kevin St') && i.intent === 'Library', action: GetLibrary},
-  { intent: 'Exams', action : Exams},
+  { intent: 'Exams', payload: /^Exams$/i, action : Exams},
   { path: 'getExamTimetable', action : GetExamTimetable},
   { intent: 'Doctor', action: GetDoctor},
   { intent: 'Greetings', action: Start },
+  { path: 'Start', payload: /^Start$/i , action: Start },
  // { intent: 'BookRestaurant', action: ShowRestaurants },
   { intent: 'BookRestaurant', action: ShowDirections },
   { intent: 'Gratitude', action: SayGoodbye }
+  
 ]

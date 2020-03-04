@@ -1,3 +1,7 @@
+Exams
+exam
+exams
+Exam
 Exam Timetable
 timetables
 exam timetables
@@ -26,3 +30,9 @@ can you show me the exam timetables
 are the exam timetables out?
 when are the exam timetables out?
 do you have the exam timetables
+Exams
+exams
+what time are exams
+what time are exams?
+What time are Exams
+What time are exams?
