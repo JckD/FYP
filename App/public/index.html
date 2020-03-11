@@ -16,7 +16,8 @@
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
 
     <link rel="shortcut icon" type="image/png" href="%PUBLIC_URL%/assets/icon/favicon.png" />
-
+    <!--Botonic Integration -->
+    <script type="text/javascript" src="https://tud-bot-d642013d-f2fa-4f01-a81a-6f349dfdb483.netlify.com/webchat.botonic.js"></script>
     <!-- add to homescreen for ios -->
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-title" content="Ionic App" />
@@ -25,6 +26,15 @@
 
   <body>
     <div id="root"></div>
+    <div id="botDiv"></div>
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function(event) {
+          Botonic.render(document.getElementById('botDiv'), {appId: '26847246-b776-4f5e-828a-1928d64b1a6c'})
+        })
+      </script>
   </body>
 
 </html>
+
+
+
