@@ -29,7 +29,7 @@ export const webchat = {
       
     }, // end of main style
     webview: {
-      style: {+
+      style: {
         top: 0,
         right: 0,
         height: 500,
