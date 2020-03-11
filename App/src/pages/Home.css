@@ -1,3 +1,12 @@
 ion-content ion-toolbar {
   --background: translucent;
 }
+
+ion-content ion-text {
+  --ion-text-color: #ffffff;
+  
+}
+
+ion-content ion-padding-horizontal {
+  padding: 120px;
+}
