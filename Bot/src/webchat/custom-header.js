@@ -1,12 +1,12 @@
 import React from 'react'
-import { staticAsset } from '@botonic/react'
+//import { staticAsset } from '@botonic/react'
 import Icon from '../assets/chatbotImage.png'
 
 export const CustomHeader = () => {
   return (
     <div
       style={{
-        background: 'linear-gradient(90deg, #184BA5 0%, #5E90C3 100%)',
+        background: 'white',
         borderRadius: '6px 6px 0px 0px',
         height: 70,
         display: 'flex',

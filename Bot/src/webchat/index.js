@@ -1,15 +1,8 @@
 import React from 'react'
 //import { staticAsset } from '@botonic/react'
 import chatbotImage from '../assets/chatbotImage.png'
-import launcherIcon from '../assets/chatbotImage.png'
-import IntroImage from '../assets/chatbotImage.png'
-import C3POLogo from '../assets/chatbotImage.png'
-import R2D2Logo from '../assets/chatbotImage.png'
-import { CustomTrigger } from './custom-trigger'
-//import { CustomHeader } from './custom-header'
-import { CustomIntro } from './custom-intro'
-import { CustomReply } from './custom-reply'
-import { CustomButton } from './custom-button'
+
+
 
 export const webchat = {
   theme: {
@@ -28,75 +21,22 @@ export const webchat = {
       backgroundImage: 'white',
       
     }, // end of main style
-    webview: {
-      style: {
-        top: 0,
-        right: 0,
-        height: 500,
-        width: '100%',
-      }, // end of webview style
-      header: {
-        style: {
-          background: 'white',
-        }, // end of webview header file
-      }, // end of webview header
-    }, // end of webview
+
     botMessageImage: chatbotImage,
+    triggerButtonImage: chatbotImage,
 
-    triggerButtonImage: launcherIcon,
-
-    triggerButton: {
-      image: launcherIcon,
-      style: {
-        width: '200px',
-      }, // end of triggerButton style
-      // custom: CustomTrigger,
-    }, //end of triggerButton
-    intro: {
-      // image: IntroImage,
-      // style: {
-      //   padding: 20
-      // }
-      custom: CustomIntro,
-    }, //end of intro
-    //brandColor: '#34aeeb',
-    headerStyle: {
-        
-        backgroundColor:'#ffffff',
-        background: '#ffffff',
-        height: 100,
-        borderRadius: 0,
-        color: '#ffffff',
-
-        style : {
-          backgroundColor:'#ffffff',
-          background: '#ffffff',
-          height: 100,
-          color: '#ffffff',
-        }
-    
-    },
+    brandColor: '#34aeeb',
+   
     headerTitle: 'TUD Bot',
-    headerImage: R2D2Logo,
+    headerImage: chatbotImage,
   
-    header: {
-      title: 'TUD Bot',
-      //subtitle: 'R2D2',
-      image: R2D2Logo,
-      style: {
-        height: 70,
-        backgroundImage: 'white',
-        background: 'white',
-      }, //end of header style
-       //custom: CustomHeader
-    }, //end of header
     /*
      * brandImage will set both headerImage and botMessageImage with its current logo
      * you can overwrite these values by redefining them individually
      */
     message: {
       bot: {
-        image: C3POLogo, // set it to 'null' to hide this image
+        image: chatbotImage, // set it to 'null' to hide this image
         style: {
           border: 'none',
           color: 'black',
@@ -172,25 +112,6 @@ export const webchat = {
       message: 'We cannot tolerate these kind of words.',
     },
   ],
- 
-  scrollbar: {
-    // enable: false,
-    autoHide: true,
-    thumb: {
-      opacity: 1,
-      // color: 'yellow',
-      bgcolor:
-        'linear-gradient(-131deg,rgba(231, 176, 43) 0%,rgb(193, 62, 81) 100%);',
-      border: '20px',
-    },
-    // track: {
-    //   color: 'black',
-    //   bgcolor:
-    //     'linear-gradient(-131deg,rgba(50, 40, 43) 0%,rgb(125, 62, 81) 100%);',
-    //   border: '20px',
-    // },
-  },
-  
 
   // Webchat listeners
   onInit: app => {
@@ -198,7 +119,7 @@ export const webchat = {
     // to obtain extra functionalities. This will open automatically the webchat.
     //app.open()
     app.addUserPayload('Start')
-    app.onOpen()
+    app.Open()
   },
   onOpen: app => {
     // app.addBotText('Hi human!')
@@ -207,9 +128,9 @@ export const webchat = {
     //app.addUserPayload('Start')
   },
   onClose: app => {
-   // console.log('I have been closed!')
+    console.log('I have been closed!')
   },
   onMessage: app => {
-    //console.log('New message!')
+    console.log('New message!')
   },
 }
