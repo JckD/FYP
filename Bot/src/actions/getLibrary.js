@@ -25,9 +25,6 @@ export default class extends React.Component {
         
             let buttonObj = params;
         
-        console.log(input);
-        // console.log(lastRoutePath);
-         console.log(session);
 
       return {buttonObj}
   }

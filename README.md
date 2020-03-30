@@ -1,3 +1,7 @@
 # FYP
 
-Only the src folder containing the main code for the bot is in the repo. 
+Final Year Project Repository 
+
+App folder contains code for web and android apps
+
+Bot folder conatins code for chatbot

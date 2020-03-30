@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { 
   Text,
   Button,
@@ -9,17 +9,51 @@ import {
     Document,
     Location, 
   Subtitle
-   } from '@botonic/react'
+   } from '@botonic/react';
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
     static async botonicInit({ input, session, params, lastRoutePath, Text}) {
         
-         //<Location text={'Augnier St'} lat='53.338526' long='-6.266484'/> 
-        
+     // const MongoClient = require('mongodb').MongoClient;
+
+
+      const {
+       Stitch,
+        RemoteMongoClient,
+         AnonymousCredential
+         } = require('mongodb-stitch-browser-sdk');
+      const client = Stitch.initializeDefaultAppClient('tudbot-bdnwa');
+
+      const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('TUDBot');
+
+
+
+      client.auth.loginWithCredential(new AnonymousCredential()).then(user =>
+      db.collection('Data').find({ "Service" : "Doctor"}, { limit: 100})
+      ).then(docs => {
+        console.log("Found docs")
+        console.log(docs._id);
+        //console.log("[MongoDB Stitch] Connected to Stitch")
+      }).catch(err => {
+        console.error(err)
+      });
+
+
+      
+      // const MongoClient = require('mongodb').MongoClient;
+      // const uri = "mongodb+srv://JDoyle:memes420@cluster0-jfz0g.mongodb.net/test?retryWrites=true&w=majority";
+      // const client = new MongoClient(uri, { useNewUrlParser: true });
+      // client.connect(err => {
+      //   const collection = client.db("test").collection("devices");
+      //   // perform actions on the collection object
+      //   client.close();
+      // });
+
+      
 
       return {}
-  }
+    }
 
   render() {   
   
@@ -29,9 +63,7 @@ export default class extends React.Component {
             TU Dublin offers a Student Health Centre at Augnier Street campus and Linenhall Campus. 
             
         </Text>
-     
-        
-           
+
         <Text>General Consultations are free</Text>
         <Text>
             There are fees for some services and Specialist Clinics

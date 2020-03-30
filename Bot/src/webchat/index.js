@@ -1,5 +1,5 @@
 import React from 'react'
-//import { staticAsset } from '@botonic/react'
+import { staticAsset } from '@botonic/react'
 import chatbotImage from '../assets/chatbotImage.png'
 
 
@@ -119,7 +119,7 @@ export const webchat = {
     // to obtain extra functionalities. This will open automatically the webchat.
     //app.open()
     app.addUserPayload('Start')
-    app.Open()
+    //app.onOpen()
   },
   onOpen: app => {
     // app.addBotText('Hi human!')

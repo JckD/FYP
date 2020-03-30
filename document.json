@@ -1,0 +1,33 @@
+{
+	
+        "Docotor": {
+            "specialists": [{
+                "Text": "Fees",
+                "url": "https://www.dit.ie/campuslife/studenthealthservice/fees/"
+            }, {
+                "Text": "Sexual Health",
+                "url": "https://www.dit.ie/campuslife/studenthealthservice/sexualhealthservice/"
+            }, {
+                "Text": "Travel Vaccinations",
+                "url": "https://www.dit.ie/campuslife/studenthealthservice/travelvaccinations/"
+            }, {
+                "Text": "Physiotherapy",
+                "url": "https://www.dit.ie/campuslife/studenthealthservice/physiotherapy/"
+            }, {
+                "Text": "Hepatitis B Vaccination Programme",
+                "url": "https://www.dit.ie/campuslife/studenthealthservice/Hep%20B%20Info%20for%20Students.doc/"
+            }]
+	    },
+
+
+  "Library" : {
+
+        "locaitons" : [{
+            "Text" : "Kevin St",
+            "Times" : "Mon-Thurs: 09:00-21:30 Friday: 09:00-17:15 Saturday : 09:30-16:30"
+        }, {
+            "Text" : "Augnier St",
+            "Times" : "Mon-Thurs: 09:00-21:00 Friday: 09:00-17:00 Saturday: 10:00-17:00"
+        }] 
+    }
+}
