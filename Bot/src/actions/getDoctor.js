@@ -13,39 +13,42 @@ import {
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
+  
+
     static async botonicInit({ input, session, params, lastRoutePath, Text}) {
         
      // const MongoClient = require('mongodb').MongoClient;
+      
+
+      // const {
+      //  Stitch,
+      //   RemoteMongoClient,
+      //    AnonymousCredential
+      //    } = require('mongodb-stitch-browser-sdk');
+
+      // const client = Stitch.initializeDefaultAppClient('tudbot-bdnwa');
+
+      // const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('TUDBot');
 
 
-      const {
-       Stitch,
-        RemoteMongoClient,
-         AnonymousCredential
-         } = require('mongodb-stitch-browser-sdk');
-      const client = Stitch.initializeDefaultAppClient('tudbot-bdnwa');
 
-      const db = client.getServiceClient(RemoteMongoClient.factory, 'mongodb-atlas').db('TUDBot');
-
-
-
-      client.auth.loginWithCredential(new AnonymousCredential()).then(user =>
-      db.collection('Data').find({ "Service" : "Doctor"}, { limit: 100})
-      ).then(docs => {
-        console.log("Found docs")
-        console.log(docs._id);
-        //console.log("[MongoDB Stitch] Connected to Stitch")
-      }).catch(err => {
-        console.error(err)
-      });
+      // client.auth.loginWithCredential(new AnonymousCredential()).then(user =>
+      // db.collection('Data').find({ "Service" : "Doctor"}, { limit: 1})
+      // ).then(docs => {
+      //   console.log("Found docs")
+      //   console.log(docs);
+      // }).catch(err => {
+      //   console.error(err)
+      // });
 
 
       
-      // const MongoClient = require('mongodb').MongoClient;
+      //  const MongoClient = require('mongodb').MongoClient;
       // const uri = "mongodb+srv://JDoyle:memes420@cluster0-jfz0g.mongodb.net/test?retryWrites=true&w=majority";
       // const client = new MongoClient(uri, { useNewUrlParser: true });
       // client.connect(err => {
-      //   const collection = client.db("test").collection("devices");
+      //   const collection = client.db("TUDBot").collection("Data");
+      //   console.log(collection)
       //   // perform actions on the collection object
       //   client.close();
       // });

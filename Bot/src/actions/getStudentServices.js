@@ -14,8 +14,11 @@ import {
 import { RequestContext } from '@botonic/react'
 
 export default class extends React.Component {
+
+   
+
     static async botonicInit({ input, session, params, lastRoutePath, Text}) {
-        
+      
      
 
       return {}

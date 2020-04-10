@@ -9,7 +9,7 @@ import SayGoodbye from './actions/say-goodbye'
 import NotFound from './actions/not-found'
 import GetRegistration from './actions/getRegistration.js'
 import GetFees from './actions/getFees.js'
-
+import GetServicesCenters from './actions/getServicesCenter'
 
 export const routes = [
   { input: i => i.confidence < 0.7, action: NotFound},
@@ -19,14 +19,14 @@ export const routes = [
   { path: 'getLibrary', action: GetLibrary},
   { intent: 'StudentServices', action: GetStudentServices},
   { intent: 'Registration', payload : /^Registration$/i , action : GetRegistration },
-  { intnent: 'Fees',payload : /^Fees$/i , action :  GetFees },
-     // { path: 'serviceCenters', action : getCenters},
+  { intent: 'Fees', payload : /^Fees$/i , action :  GetFees },
+  { intent: 'serviceCenters', payload : /^ServicesCenter$/i , action : GetServicesCenters},
     //  { path : 'Exams', action : getExamInfo},
     //  { path : 'graduation', action : getGrad},
       //{ path : 'onlineServices', action :getOnlineServices}
   { intent: 'Exams', payload: /^Exams$/i, action : Exams},
   { path: 'getExamTimetable', action : GetExamTimetable},
-  { intent: 'Doctor', action: GetDoctor},
+  { intent: 'Doctor', payload: /^Docotor$/i, action: GetDoctor},
   { intent: 'Greetings', action: Start },
   { path: 'Start', payload: /^Start$/i , action: Start },
   { intent: 'Gratitude', action: SayGoodbye }

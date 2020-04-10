@@ -11,11 +11,10 @@ export default class extends React.Component {
   render() {
     return (
       <>
-        <Text>Hello! Welcome to TUD's Student Chatbot {"\n"} What can I help you with today? 
+        <Text>Hello! Welcome to TUD's Student Chatbot, What can I help you with today? 
           <Reply payload='Library'>Library</Reply>
-          <Reply payload='Exams'>Exams</Reply>
           <Reply payload='Doctor'>Doctor</Reply>
-          <Reply>Student Services</Reply>
+          <Reply payload='StudentServices'>Student Services</Reply>
         </Text>
 
       </>
